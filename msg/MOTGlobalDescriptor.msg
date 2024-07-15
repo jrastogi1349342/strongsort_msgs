@@ -1,6 +1,6 @@
 # Global compact descriptor for each object detected in MOT
 
-# Header (unknown if necessary)
+# Header (necessary for tf2 transform)
 std_msgs/Header header
 
 # Robot ID (used)
@@ -18,7 +18,7 @@ uint32 obj_id
 # Object class ID (used)
 uint32 obj_class_id
 
-# Maximum confidence found for this object, between 0 and 100 (not used yet)
+# Maximum confidence found for this object, between 0 and 100 (used)
 float32 max_confidence
 
 # Best compact descriptor vector from CosPlace of object (used)
