@@ -3,43 +3,40 @@
 # Header (unknown if necessary)
 std_msgs/Header header
 
-# Robot ID
+# Robot ID (used)
 uint32 robot_id
 
-# ID of robot that this message is going to
+# ID of robot that this message is going to (not used yet)
 uint32 robot_id_to
 
-# Keyframe ID
+# Keyframe ID (not used by me yet)
 uint32 keyframe_id
 
-# Object ID
+# Object ID (used)
 uint32 obj_id
 
-# Object class ID
+# Object class ID (used)
 uint32 obj_class_id
 
-# Maximum confidence found for this object, between 0 and 100
+# Maximum confidence found for this object, between 0 and 100 (not used yet)
 float32 max_confidence
 
-# Best compact descriptor vector from CosPlace of object 
+# Best compact descriptor vector from CosPlace of object (used)
 # (corresponding to max_confidence)
 float64[] best_descriptor
 
-# Current confidence found for this object, between 0 and 100
+# Current confidence found for this object, between 0 and 100 (not used yet)
 float32 curr_confidence
 
-# Current angle of object in x direction 
-float32 angle_x
+# Current pitch of object (used)
+float32 pitch
 
-# Current angle of object in y direction 
-float32 angle_y
-
-# Current angle of object in z direction 
-float32 angle_z
+# Current yaw of object (used)
+float32 yaw
 
 # Current distance between agent camera (if stereo, assuming each camera is close enough to 
-# the center of stereo) and the detected object
+# the center of stereo) and the detected object (used)
 float32 distance
 
-# Current co-localization from current robot to robot receiving this message
+# Current co-localization from current robot to robot receiving this message (used)
 geometry_msgs/Pose colocalization
