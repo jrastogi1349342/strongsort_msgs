@@ -6,7 +6,7 @@ std_msgs/Header header
 # Robot ID (used)
 uint32 robot_id
 
-# ID of robot that this message is going to (not used yet)
+# ID of robot that this message is going to (used)
 uint32 robot_id_to
 
 # Keyframe ID (not used by me yet)
@@ -38,5 +38,8 @@ float32 yaw
 # the center of stereo) and the detected object (used)
 float32 distance
 
+# Current pose, for estimating relative locations of objects
+geometry_msgs/Pose pose
+
 # Current co-localization from current robot to robot receiving this message (used)
-geometry_msgs/Pose colocalization
+geometry_msgs/TransformStamped colocalization
