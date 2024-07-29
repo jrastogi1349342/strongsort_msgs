@@ -15,23 +15,21 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
-find_package(sensor_msgs REQUIRED)
+# find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
-find_package(nav_msgs REQUIRED)
+# find_package(nav_msgs REQUIRED)
 find_package(CUDAToolkit REQUIRED)
 
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/LastSeenDetection.msg"
   "msg/MOTGlobalDescriptor.msg"
   "msg/MOTGlobalDescriptors.msg"
-  "msg/MOTInterRobotEdge.msg"
   "msg/UnifiedObjectIDs.msg"
   DEPENDENCIES 
   std_msgs 
-  sensor_msgs 
+  # sensor_msgs 
   geometry_msgs
-  nav_msgs
+  # nav_msgs
 )
 
 ament_export_dependencies(rosidl_default_runtime)

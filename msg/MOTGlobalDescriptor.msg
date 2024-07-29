@@ -6,12 +6,6 @@ std_msgs/Header header
 # Robot ID (used)
 uint32 robot_id
 
-# ID of robot that this message is going to (used)
-uint32 robot_id_to
-
-# Keyframe ID (not used by me yet)
-uint32 keyframe_id
-
 # Object ID (used)
 uint32 obj_id
 
@@ -40,6 +34,3 @@ float32 distance
 
 # Current pose, for estimating relative locations of objects
 geometry_msgs/Pose pose
-
-# Current co-localization from current robot to robot receiving this message (used)
-geometry_msgs/TransformStamped colocalization
