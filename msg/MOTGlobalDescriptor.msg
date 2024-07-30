@@ -22,15 +22,14 @@ float64[] best_descriptor
 # Current confidence found for this object, between 0 and 100 (not used yet)
 float32 curr_confidence
 
-# Current pitch of object (used)
-float32 pitch
+# Current x value of object, relative to camera frame (used)
+float32 rel_x
 
-# Current yaw of object (used)
-float32 yaw
+# Current y value of object, relative to camera frame (used)
+float32 rel_y
 
-# Current distance between agent camera (if stereo, assuming each camera is close enough to 
-# the center of stereo) and the detected object (used)
-float32 distance
+# Current z value of object, relative to camera frame (used)
+float32 rel_z
 
 # Current pose, for estimating relative locations of objects
 geometry_msgs/Pose pose
